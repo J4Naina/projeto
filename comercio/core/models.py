@@ -10,7 +10,7 @@ class Categoria(models.Model):
 
 #Model do produto
 class Produto(models.Model):
-    mainimage = models.ImageField(upload_to='produtos/', blank=True)
+    mainimage = models.ImageField(upload_to='core/urls', blank=True)
     nome = models.CharField(max_length=300)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     previa_texto = models.TextField(max_length=200, verbose_name='Prévia do texto')
