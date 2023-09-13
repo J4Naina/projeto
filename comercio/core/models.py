@@ -12,7 +12,6 @@ class Categoria(models.Model):
 class Produto(models.Model):
     mainimage = models.ImageField(upload_to='produtos/', blank=True)
     nome = models.CharField(max_length=300)
-    slug = models.SlugField()
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     previa_texto = models.TextField(max_length=200, verbose_name='Prévia do texto')
     texto_detalhado = models.TextField(max_length=1000, verbose_name='Texto detalhado')
