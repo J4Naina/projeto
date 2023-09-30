@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Amo Suspiros Gourmet - Catálogo</title>
+  <script src="https://kit.fontawesome.com/bdef4048f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .catalogo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .produto {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.3s ease;
+    }
+
+    .produto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .produto img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .produto h2 {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .produto p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .produto .preco {
+      color: #333;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .produto .btn-adicionar {
+      background-color: #ffcc99;
+      border: none;
+      color: #333;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .produto .btn-adicionar:hover {
+      background-color: #ffad66;
+    }
+
+    .produto .btn-adicionar:hover {
+      background-color: #ff7255;
+    }
+  </style>
+</head>
+<body>
+  <!-- Seção de cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="caminho/para/o/logo.png" alt="Amo Suspiros Gourmet">
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrinho.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador-carrinho">0</span>
+        </a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Seção do catálogo -->
+  <section class="catalogo">
+    <h1 class="titulo-catalogo">Catálogo de Suspiros</h1>
+
+    <div class="catalogo">
+      <div class="produto">
+        <img src="data:image/jpeg;base64,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" alt="Suspiro 1">
+        <h3>Suspiro de Morango</h3>
+        <p>Delicioso suspiro com sabor de morango.</p>
+        <p>R$ 5,00</p>
+        <button class="btn-adicionar">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pS_wlklJwNMrJna3EwA-CowFmBuTp_tIQQ&usqp=CAU" alt="Suspiro 2">
+        <h3>Suspiro de Chocolate</h3>
+        <p>Irresistível suspiro com sabor de chocolate.</p>
+        <p>R$ 4,50</p>
+        <button class="btn-adicionar">Adicionar ao Carrinho</button>
+      </div>
+      <div class="produto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStIn22oF728PoxFIxYsqxQbG6fhee3UD2GUQ&usqp=CAU" alt="Suspiro 3">
+        <h3>Suspiro Misto</h3>
+        <p>Combinação perfeita de sabores: morango, chocolate e baunilha.</p>
+        <p>R$ 6,00</p>
+        <button class="btn-adicionar">Adicionar ao Carrinho</button>
+      </div>
+    </div>
+  </section>
+
+    <footer>
+      <p>Amo Suspiros Gourmet &copy;</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+      
+
+
+      

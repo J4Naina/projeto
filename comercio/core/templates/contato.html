@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Amo Suspiros Gourmet - Contato</title>
+  <script src="https://kit.fontawesome.com/bdef4048f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contato {
+      margin: 40px;
+    }
+
+    .titulo-contato {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-contato {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 16px;
+      color: #333;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group textarea {
+      height: 150px;
+    }
+
+    .btn-enviar {
+      background-color: #ffa07a;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      float: right;
+    }
+
+    .btn-enviar:hover {
+      background-color: #ff7255;
+    }
+  </style>
+  <script>
+    function enviarMensagem() {
+      // Lógica para enviar a mensagem de contato aqui
+
+      // Exemplo de alerta
+      alert("Obrigado! Sua mensagem foi enviada com sucesso.");
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="caminho/para/o/logo.png" alt="Amo Suspiros Gourmet">
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrinho.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="contador-carrinho">0</span>
+        </a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Seção de contato -->
+  <section class="contato">
+    <h1 class="titulo-contato">Entre em Contato</h1>
+
+    <div class="form-contato">
+      <form>
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" required></textarea>
+        </div>
+
+        <button class="btn-enviar" onclick="enviarMensagem()">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+</body>
+
+<footer>
+  <p>Amo Suspiros Gourmet &copy;</p>
+</footer>
+
+</html>

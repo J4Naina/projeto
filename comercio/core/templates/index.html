@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Amo Suspiros Gourmet - E-commerce de Suspiros</title>
+  <script src="https://kit.fontawesome.com/bdef4048f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="meujs.js"></script>
+
+</head>
+<body>
+  <!-- Seção de cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="caminho/para/o/logo.png" alt="Amo Suspiros Gourmet">
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrinho.html">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="contador-carrinho">0</span>
+        </a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+</head>
+
+<body>
+  <div class="carousel">
+    <ul>
+      <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7pS_wlklJwNMrJna3EwA-CowFmBuTp_tIQQ&usqp=CAUg" alt="Imagem 1"></li>
+      <li><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOEBuxDUfc7i-Pym2IJd3HJ4IZdx-NZ9aAg&usqp=CAU" alt="Imagem 2"></li>
+      <li><img src="https://www.google.com/imgres?imgurl=http%3A%2F%2Fo.imgac.net%2Fdica%2Fsuspiros.jpeg&tbnid=FVJRjvasHyisWM&vet=12ahUKEwic8O-Iwtf_AhXTq5UCHRGhB8oQMygsegUIARC7Ag..i&imgrefurl=https%3A%2F%2Fwww.almanaqueculinario.com.br%2Fdica%2Fsuspiro-e-seus-segredos-134&docid=QuyYyb4fHcF4-M&w=650&h=460&q=suspiros%20imagem&client=opera-gx&ved=2ahUKEwic8O-Iwtf_AhXTq5UCHRGhB8oQMygsegUIARC7Ag" alt="Imagem 3"></li>
+      <li><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimg.elo7.com.br%2Fproduct%2Foriginal%2F1A6F853%2Fpirulito-de-suspiro-personalizado.jpg&tbnid=xa7dsEXYDmNSpM&vet=12ahUKEwiL07aixNf_AhXQObkGHb4QBIQQMygTegUIARD1AQ..i&imgrefurl=https%3A%2F%2Fwww.elo7.com.br%2Fpirulito-de-suspiro%2Fdp%2FA7391D&docid=rZbBvwKvi5fkEM&w=960&h=960&q=pirulito%20de%20suspiro%20imagem&client=opera-gx&ved=2ahUKEwiL07aixNf_AhXQObkGHb4QBIQQMygTegUIARD1AQ" alt="Imagem 4"></li>
+    </ul>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var carousel = $('.carousel ul');
+      var carouselItems = carousel.find('li');
+
+      // Clone o último item e coloque-o antes do primeiro item
+      carouselItems.last().prependTo(carousel);
+
+      // Atualize a largura do elemento ul para acomodar todos os itens
+      carousel.css('width', carouselItems.length * 500);
+
+      function moveCarousel() {
+        carousel.animate({ left: '-=500' }, 1000, function() {
+          // Mova o primeiro item para o final da lista após a animação
+          carousel.find('li').first().appendTo(carousel);
+          carousel.css('left', '0');
+        });
+      }
+
+      // Chame a função moveCarousel a cada 3 segundos
+      setInterval(moveCarousel, 3000);
+    });
+  </script>
+  
+  <!-- Seção de rodapé -->
+
+  <footer>
+    <p>&copy; 2023 Amo Suspiros Gourmet. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

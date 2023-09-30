@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Amo Suspiros Gourmet - Carrinho de Compras</title>
+  <script src="https://kit.fontawesome.com/bdef4048f5.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .carrinho {
+      margin: 40px;
+    }
+
+    .titulo-carrinho {
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .item-carrinho {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .item-carrinho img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-right: 20px;
+    }
+
+    .item-carrinho .info-produto {
+      flex-grow: 1;
+    }
+
+    .item-carrinho h3 {
+      font-size: 18px;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .item-carrinho .preco {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .item-carrinho .quantidade {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .total-carrinho {
+      margin-top: 20px;
+      text-align: right;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .btn-finalizar {
+      background-color: #ffa07a;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      float: right;
+    }
+
+    .btn-finalizar:hover {
+      background-color: #ff7255;
+    }
+  </style>
+  <script>
+    function finalizarCompra() {
+      // Lógica para finalizar a compra aqui
+
+      // Exemplo de alerta
+      alert("Obrigado por sua compra! Seu pedido foi enviado.");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="caminho/para/o/logo.png" alt="Amo Suspiros Gourmet">
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">Página Inicial</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrinho.html">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="contador-carrinho">0</span>
+        </a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Seção do carrinho de compras -->
+  <section class="carrinho">
+    <h1 class="titulo-carrinho">Carrinho de Compras</h1>
+
+    <div class="item-carrinho">
+      <img src="caminho/para/a/imagem-do-produto.jpg" alt="Nome do Produto">
+      <div class="info-produto">
+        <h3>Nome do Produto</h3>
+        <p class="preco">R$ XX,XX</p>
+        <p class="quantidade">Quantidade: 1</p>
+      </div>
+    </div>
+
+    <!-- Adicione mais itens conforme necessário -->
+
+    <p class="total-carrinho">Total: R$ XX,XX</p>
+    <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar Compra</button>
+  </section>
+  <button class="btn-ajuda" onclick="abrirAjuda()">Ajuda</button>
+  <footer>
+    <p>Amo Suspiros Gourmet &copy;</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,288 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 2000px;
+  margin-top: 50px;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Estilos do cabeçalho */
+header {
+  height: 15%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 999;
+}
+.carousel {
+  width: 100%;
+  height: 1000%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 0;
+  animation: carousel-animation 10s infinite;
+}
+
+.carousel ul li {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes carousel-animation {
+  0% { left: 0; }
+  20% { left: -25%; }
+  40% { left: -50%; }
+  60% { left: -75%; }
+  80% { left: -100%; }
+  100% { left: 0; }
+}
+
+.logo img {
+  width: 150px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  cursor: pointer;
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Estilos do destaque */
+.destaque {
+  background-color: #ffe6cc;
+  padding: 40px;
+  text-align: center;
+}
+
+.destaque h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  
+}
+
+.destaque p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Estilos do catálogo de produtos */
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.produto {
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.produto img {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.produto h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.produto p.preco {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.produto a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.btn-adicionar {
+  background-color: #ffcc99;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+}
+
+.btn-adicionar:hover {
+  background-color: #ffad66;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-linkcatalogo {
+  background-image: linear-gradient(to right, #444444, #222222);
+  text-align: center;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-linkcatalogo:hover {
+  background-image: linear-gradient(to right, #222222, #000000);
+  cursor: pointer;
+}
+
+/* Estilos do rodapé */
+footer {
+  height: 100%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 25%;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+}
+
+
+
+
+/* Estilos para o carrossel */
+.carousel-container {
+  width: 300px; /* Largura do carrossel */
+  margin: 0 auto;
+  overflow: hidden;
+  top: 20;
+  left: 0;
+  right: 0;
+}
+
+.carousel-slide {
+  display: flex;
+  width: calc(300px * 3); /* Largura total dos slides */
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  width: 300px; /* Largura de cada slide */
+  flex-shrink: 0;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1; /* Cor dos botões */
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-container {
+  width: 100%;
+  height: 92%; /* Defina a altura desejada para o carrossel */
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 300%; /* Número de slides multiplicado por 100% */
+  height: 98%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 33.33%; /* Largura de cada slide (100% dividido pelo número de slides) */
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Outros estilos opcionais */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #f1f1f1; /* Cor dos botões */
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+
+
